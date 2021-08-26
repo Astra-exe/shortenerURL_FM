@@ -87,6 +87,14 @@ hr {
     width: 90%;
     /* margin: 0 1.5rem; */
     padding: 2rem 1rem;
+    opacity: 0;
+    transition: all ease-in-out 900ms;
+}
+
+.header__menu-active {
+    top: 52%;
+    opacity: 1;
+    transition: all ease-in-out 900ms;
 }
 
 .header__menu {
@@ -139,6 +147,12 @@ hr {
 
 
 /* Hero content for call to action*/
+
+.main {
+    margin-top: 3rem;
+}
+
+
 
 .hero__banner {
     display: block;
