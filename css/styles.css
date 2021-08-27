@@ -6,6 +6,7 @@
     --NeutralGrayishViolet: hsl(257, 7%, 63%);
     --NeutralVeryDarkBlue: hsl(255, 11%, 22%);
     --VeryDarkViolet: hsl(260, 8%, 14%);
+    --fontShortener: 'Poppins', sans-serif;
 }
 
 * {
@@ -218,4 +219,67 @@ hr {
     border-radius: 2.3rem;
     padding: 1rem 0;
     cursor: pointer;
+}
+
+/* Styles to form URL section  */
+
+.shorter {
+    background-color: aquamarine;
+    margin: 1.5rem;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    background-color: var(--PrimaryDarkViolet);
+    background-image: url('../images/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 237px 100px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    min-height: 10rem;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.form__input{
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 0;
+    text-align: center;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    font-family: var(--fontShortener);
+}
+
+.form__input--url {
+    text-align: left;
+}
+
+.form__input--url::placeholder {
+    color: var(--NeutralGray);
+}
+
+.form__input--shorten {
+    background-color: var(--PrimaryCyan);
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+
+}
+
+.form__error {
+    font-size: 1.1rem;
+    color: var(--SecondaryRed);
+    font-weight: 500;
+    opacity: 0.8;
+    display: none;
+}
+
+.form__error-active {
+    display: inline-block;
+    margin-top: 0.3rem;
+    margin-bottom: 0.7rem;
 }
