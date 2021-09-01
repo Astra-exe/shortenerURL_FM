@@ -57,19 +57,16 @@ hr {
     height: 100%;
 }
 
-
 @keyframes moveToLeft {
     0% {
         opacity: 0;
         transform: translateX(-120px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
     }
 }
-
 
 .header__burger {
     height: 2rem;
@@ -109,7 +106,7 @@ hr {
 }
 
 .header__menu-active {
-    top: 52%;
+    top: 25rem;
     opacity: 1;
     transition: all ease-in-out 900ms;
 }
@@ -169,12 +166,10 @@ hr {
     margin-top: 3rem;
 }
 
-
-
 .hero__banner {
     display: block;
     margin-left: 2rem;
-    width: 130%;
+    width: 100%;
 }
 
 .hero__image {
@@ -222,6 +217,7 @@ hr {
     cursor: pointer;
 }
 
+
 /* Styles to form URL section  */
 
 .shorter {
@@ -245,7 +241,7 @@ hr {
     /* justify-content: center; */
 }
 
-.form__input{
+.form__input {
     font-size: 1.6rem;
     font-weight: 500;
     border: 0;
@@ -268,7 +264,6 @@ hr {
     cursor: pointer;
     color: white;
     font-weight: 700;
-
 }
 
 .form__error {
@@ -285,6 +280,7 @@ hr {
     margin-bottom: 0.7rem;
 }
 
+
 /* Styles to template */
 
 .status {
@@ -292,11 +288,10 @@ hr {
     padding: 1.5rem;
 }
 
-
 .template__container {
     margin: 2rem 0;
     display: grid;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
     min-height: 9rem;
     background-color: white;
     padding: 1rem 0;
