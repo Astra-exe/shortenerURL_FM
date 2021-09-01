@@ -69,11 +69,33 @@
                 <em class="form__error">
                     Please add a link
                 </em>
-                <input type="button" value="Shorten It!" class="form__input form__input--shorten">
+                <input type="button" value="Shorten It!" class="form__input form__input--shorten" id="shorten-btn">
             </form>
         </section>
+
     </main>
 
+
+    <section class="status">
+        <div class="results">
+            <template>
+                <div class="template__container">
+                    <span class="result__link result__link--prev" id="linkPrev">
+                        https://www.frontendmentor.io
+                    </span>
+                    </span>
+                    <span class="result__link result__link--result" id="linkResult">
+                        https://rel.ink/k4lKyk
+                    </span>
+                    <button class="result__copy-result" type="button">
+                        Copy
+                    </button>
+                </div>
+            </template>
+        </div>
+        <!-- Satistics -->
+
+    </section>
     <!-- Features
   Pricing
   Resources
@@ -83,10 +105,10 @@
 
   More than just shorter links
 
-  
+
 
   Get Started
-  
+
   Shorten a link here...
 
   Shorten It!
@@ -138,6 +160,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge " target="_blank ">Frontend Mentor</a>. 
     Coded by <a href="# ">Your Name Here</a>.
   </div> -->
+
   <script src="./js/main.js"></script>
 </body>
 
