@@ -15,7 +15,7 @@ burgerIcon.addEventListener('click', () => {
 shorterBtn.addEventListener('click', shortenUrl);
 
 function shortenUrl() {
-    debugger
+    // debugger
     const url = getNewUrl();
   
     if (url.isUrl()) {
