@@ -12,48 +12,70 @@ burgerIcon.addEventListener('click', () => {
 });
 
 // Listener to add the template with the shorten link
-shorterBtn.addEventListener('click', getNewUrl);
+shorterBtn.addEventListener('click', shortenUrl);
+
+function shortenUrl() {
+    debugger
+    const url = getNewUrl();
+  
+    if (url.isUrl()) {
+        console.log('Valid URL');
+        url.showTemplate();
+    }
+    else {
+        console.log('Invalid URL');
+        url.showError();
+    }
+}
+
 
 function getNewUrl() {
     const inputUrl = document.querySelector('#input-url');
     const urlText = inputUrl.value;
     const errorLabel = document.querySelector('.form__error');
     
-    if (isUrl(urlText)) {
-        console.log('Valid URL');
-        showTemplate(urlText, errorLabel)
+    
+    return {
+        isUrl: () => {
+            let validUrl;
+            try {   
+                validUrl  = new URL(urlText);
+            } catch (error) {
+                return false;
+            } 
+            return validUrl.protocol === 'http:' || validUrl.protocol === 'https:';
+        },
+
+        showTemplate: function() {
+            this.updateInput(1);
+            const sectionResult = document.querySelector('.results');
+            const template = document.querySelector("template");
+            const clon = template.content.cloneNode(true);
+            const spanUrlPrev = clon.querySelector('#linkPrev');
+            spanUrlPrev.textContent = urlText;
+            sectionResult.appendChild(clon);
+        },
+
+        showError: function() {
+            this.updateInput(0);
+        },
+
+        updateInput: (flag) => {
+            inputUrl.value = ''
+            // if flag is 1 then the url is correct
+            if (flag) {
+                errorLabel.classList.remove('form__error-active');
+                inputUrl.style.outline = 'initial'
+            }
+             // if flag is 0 then the url is incorrect
+            else {
+                errorLabel.classList.add('form__error-active');
+                inputUrl.focus();
+                inputUrl.style.outline = '3px solid red'
+            }
+        }
+
+        
     }
-    else {
-        console.log('Invalid URL');
-        showError(errorLabel, inputUrl);
-    }
 }
 
-
-function isUrl(url) {
-    let validUrl;
-    try {
-        validUrl  = new URL(url);
-    } catch (error) {
-        return false;
-    } 
-    return validUrl.protocol === 'http:' || validUrl.protocol === 'https:';
-}
-
-
-function showTemplate(urlSring, errorElement) {
-    errorElement.classList.remove('form__error-active');
-    const sectionResult = document.querySelector('.results');
-    const template = document.querySelector("template");
-    const clon = template.content.cloneNode(true);
-    const spanUrlPrev = clon.querySelector('#linkPrev');
-    spanUrlPrev.textContent = urlSring;
-    sectionResult.appendChild(clon);
-}
-
-function showError(errorElement, input) {
-    errorElement.classList.add('form__error-active');
-    input.value = '';
-    input.focus();
-    input.style.outline = '3px solid red'
-}
