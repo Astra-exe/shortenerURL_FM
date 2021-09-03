@@ -25,75 +25,105 @@
             <img src="./images/logo.svg" alt="Logo de la pagina" class="header__logo-img">
         </picture>
         <div class="header__menu-container">
-            <ul class="header__menu" ">
-                <li class="header__item ">
+            <ul class="header__menu">
+                <li class="header__item">
                     <a href=" " class="header__link ">Features</a>
                 </li>
-                <li class="header__item ">
+                <li class="header__item">
                     <a href=" " class="header__link ">Pricing</a>
                 </li>
-                <li class="header__item ">
+                <li class="header__item">
                     <a href=" " class="header__link ">Resources</a>
                 </li>
                 <hr>
-                <li class="header__item ">
+                <li class="header__item">
                     <button class="header__btn " type="button ">Login</button>
                 </li>
-                <li class="header__item ">
+                <li class="header__item">
                     <button class="header__btn header__btn--SignUp " type="button ">Sign Up</button>
                 </li>
             </ul>
         </div>
         <div class="header__burger ">
-            <span class="header__line header__line--top "></span>
-            <span class="header__line header__line--mid "></span>
-            <span class="header__line header__line--bottom "></span>
+            <span class="header__line header__line--top"></span>
+            <span class="header__line header__line--mid"></span>
+            <span class="header__line header__line--bottom"></span>
         </div>
     </header>
-    <main class = "main ">
-        <section class="hero ">
-            <picture class = "hero__banner ">
+    <main class = "main">
+        <section class="hero">
+            <picture class = "hero__banner">
                 <img src="./images/illustration-working.svg " alt="Persona trabajamdp en escritorio " class="hero__image ">
             </picture>
-            <div class="hero__CTA ">
-                <h1 class="hero__title ">More than just shorter links</h1>
-                <p class = "hero__copyOne ">Build your brand’s recognition and get detailed insights 
+            <div class="hero__CTA">
+                <h1 class="hero__title">More than just shorter links</h1>
+                <p class = "hero__copyOne">Build your brand’s recognition and get detailed insights 
                     on how your links are performing.</p>
-                <a href=" " class="hero__link ">Get Started</a>
+                <a href=" " class="hero__link">Get Started</a>
             </div>
         </section>
-        <section class="shorter ">
-            <form action="# " class="form ">
-                <input type="text " class="form__input form__input--url " aria-label="Enter your URL here to shorten " placeholder="Shorten a link here... ">
-                <em class="form__error ">
+        <section class="shorter">
+            <form action="#" class="form">
+                <input type="text " class="form__input form__input--url " aria-label="Enter your URL here to shorten " placeholder="Shorten a link here..." id="input-url">
+                <em class="form__error">
                     Please add a link
                 </em>
-                <input type="button" value="Shorten It! " class="form__input form__input--shorten " id="shorten-btn">
+                <input type="button" value="Shorten It!" class="form__input form__input--shorten" id="shorten-btn">
             </form>
         </section>
 
     </main>
 
 
-    <section class="status ">
-        <div class="results ">
+    <section class="status">
+        <div class="results">
             <template>
-                <div class="template__container ">
-                    <span class="result__link result__link--prev " id="linkPrev ">
-                        https://www.frontendmentor.io
+                <div class="template__container">
+                    <span class="result__link result__link--prev" id="linkPrev">
+                        <!-- https://www.frontendmentor.io -->
                     </span>
                     </span>
-                    <span class="result__link result__link--result " id="linkResult ">
+                    <span class="result__link result__link--result" id="linkResult">
                         https://rel.ink/k4lKyk
                     </span>
-                    <button class="result__copy-result " type="button">
+                    <button class="result__copy-result" type="button">
                         Copy
                     </button>
                 </div>
             </template>
         </div>
-        <!-- Satistics -->
-        
+        <!-- Statistics -->
+        <div class="features">
+            <h2 class="hero__title hero__title--feat">Advanced statistics</h2>
+            <p class="hero__copyOne hero__copyOne--feat">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+            <div class="features__card">
+                <div class="icon-feature">
+                    <figure class="icon-feature__logo">
+                        <img src="./images/icon-brand-recognition.svg" alt="Icon of graphic increasing" class="icon-feature__image">
+                    </figure>
+                </div>
+                <h3 class="title-card">Brand Recognition</h3>
+                <p class="copy-card">Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+            </div>
+            <div class="features__card">
+                <div class="icon-feature">
+                    <figure class="icon-feature__logo">
+                        <img src="./images/icon-detailed-records.svg" alt="Icon of a clock" class="icon-feature__image">
+                    </figure>
+                </div>
+                <h3 class="title-card">Detailed Records</h3>
+                <p class="copy-card">  Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+            </div>
+            <div class="features__card features__card--last">
+                <div class="icon-feature">
+                    <figure class="icon-feature__logo">
+                        <img src="./images/icon-fully-customizable.svg" alt="Icon of art pencils" class="icon-feature__image">
+                    </figure>
+                </div>
+                <h3 class="title-card">Fully Customizable</h3>
+                <p class="copy-card">Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+            </div>
+        </div>
     </section>
     <section class="Second-CTA">
         <div class="CTA-Content">
@@ -102,42 +132,6 @@
         </div>
     </section>
     <!-- Features
-  Pricing
-  Resources
-
-  Login
-  Sign Up
-
-  More than just shorter links
-
-
-
-  Get Started
-
-  Shorten a link here...
-
-  Shorten It!
-
-  Advanced Statistics
-
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
   Boost your links today
 
   Get Started
