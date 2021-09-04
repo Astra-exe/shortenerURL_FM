@@ -430,3 +430,55 @@ hr {
     font-weight: 500;
     color: var(--NeutralGray);
 }
+
+
+/* Styles to footer */
+
+.footer {
+    background-color: var(--VeryDarkViolet);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 0;
+    gap: 1.5rem 0;
+}
+
+.footer__list, .media__list {
+    list-style: none;
+}
+
+.footer__item {
+    margin: 2rem 0;
+}
+
+
+.footer__list-title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.footer__link {
+    color: var(--NeutralGray);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.footer__subitem {
+    margin: 1rem 0;
+}
+
+.media__list {
+    display: flex;
+    justify-content: center;
+    gap: 0 1.5rem;
+}
+
+.media__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
