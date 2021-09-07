@@ -152,7 +152,7 @@ hr {
     border-radius: 2rem;
     border: 0;
     padding: 1rem 0;
-    /* background-color: yellow; */
+    cursor: pointer;
 }
 
 .header__btn--SignUp {
@@ -362,6 +362,7 @@ hr {
     text-align: center;
 }
 /* Features styles*/
+
 
 .hero__title--feat {
     font-size: 2.4rem;
