@@ -443,7 +443,7 @@ hr {
     gap: 1.5rem 0;
 }
 
-.footer__list, .media__list {
+.footer__list, .footer__sublist, .media__list {
     list-style: none;
 }
 
