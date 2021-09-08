@@ -30,6 +30,11 @@
 }
 
 /* Styles to Features section */
+
+.status {
+    padding: 7% 0;
+}
+
 .features {
     padding: 0 10%;
     display: grid;
@@ -41,13 +46,17 @@
                          "card1 card2  card3";
     align-content: center;
     justify-items: center;
+    margin-bottom: 3rem;
 }
+
 
 .features__card {
     margin-top: 6rem;
-    padding: 1rem 2rem;
-    justify-content: flex-end;
+    padding: 2rem 2rem;
+    /* justify-content: center; */
 }
+
+
 
 .hero__title--feat {
     font-size: 2.4rem;
@@ -65,14 +74,16 @@
     grid-area: card1;
 }
 
-.features > div:nth-of-type(2) {
+.features .features__card:nth-of-type(2) {
+    transform: translateY(10%);
     grid-area: card2;
 }
 
-
-.features > div:last-child {
+.features .features__card:nth-of-type(3) {
+    transform: translateY(20%);
     grid-area: card3;
 }
+
 
 .features__card:not(.features__card--last)::after {
     top: 40%;
@@ -96,3 +107,6 @@
     text-align: left;
     font-size: 1.4rem;
 }
+
+/* Styles to last CTA */
+
